@@ -2,19 +2,177 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My First GitHub Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Space</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f0f4f8;
+    /* 全体の基本設定 */
+    :root {
+      --primary: #2563eb;       /* メインの青色 */
+      --primary-hover: #1d4ed8; /* ボタンを押したときの色 */
+      --bg: #f8fafc;            /* 背景色（淡いグレー） */
+      --card-bg: #ffffff;       /* カードの背景（白） */
+      --text-main: #1e293b;     /* 本文の文字色 */
+      --text-muted: #64748b;    /* 補足説明の文字色 */
+      --border: #e2e8f0;        /* 枠線の色 */
     }
-    h1 { color: #1a73e8; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    /* 中央の白いカード */
+    .container {
+      background: var(--card-bg);
+      max-width: 560px;
+      width: 100%;
+      padding: 40px 32px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border: 1px solid var(--border);
+    }
+
+    /* アイコン・アバター部分 */
+    .avatar-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #e0e7ff;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* 見出しと紹介文 */
+    .profile-info {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .profile-info h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .profile-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* セクション区切り */
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    /* リンク・ボタン一覧 */
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .link-item {
+      display: block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text-main);
+      background-color: #ffffff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .link-item:hover {
+      border-color: var(--primary);
+      background-color: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    .link-item .arrow {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
-  <h1>こんにちは！世界！</h1>
-  <p>GitHub Pages を使って、ブラウザだけでWebページを公開できました。</p>
+
+  <main class="container">
+    <!-- アバター（頭文字や絵文字に変更可能） -->
+    <div class="avatar-wrapper">
+      <div class="avatar">🚀</div>
+    </div>
+
+    <!-- 名前と自己紹介 -->
+    <div class="profile-info">
+      <h1>マイ ホームページ</h1>
+      <p>GitHub Pages で公開したテストページです。<br>日常のメモや制作物をまとめています。</p>
+    </div>
+
+    <!-- リンク集（ポートフォリオやよく使うページ） -->
+    <div class="section-title">Links & Projects</div>
+    <nav class="links-list">
+      <a href="https://github.com" target="_blank" class="link-item">
+        <span>GitHub プロフィール</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#" class="link-item">
+        <span>作成したツール / アプリ</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#" class="link-item">
+        <span>活動記録・メモ</span>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
+
+    <!-- コピーライトなど -->
+    <footer>
+      Powered by GitHub Pages
+    </footer>
+  </main>
+
 </body>
 </html>
